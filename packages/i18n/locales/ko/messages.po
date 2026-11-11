@@ -1141,6 +1141,9 @@ msgstr "사용자당 월 {monthlyPrice}. 모바일, 자동화, 우선 지원."
 msgid "{myFailedCount} of your automations failed their last run"
 msgstr "내 자동화 {myFailedCount}개가 마지막 실행에 실패했습니다"
 
+msgid "{name} {version} is too old for chat"
+msgstr "{name} {version}은(는) 채팅에 사용하기에 너무 오래되었습니다"
+
 msgid "{name} accounts"
 msgstr "{name} 계정"
 
@@ -1458,6 +1461,9 @@ msgstr "{user}님이 다시 참여했습니다."
 
 msgid "{vcpuCount} vCPU · {memory} GB"
 msgstr "{vcpuCount} vCPU · {memory} GB"
+
+msgid "{vendor} is limiting downloads right now. Wait a minute and try again."
+msgstr "{vendor}에서 지금 다운로드를 제한하고 있습니다. 잠시 후 다시 시도하세요."
 
 msgid "{waiting} Waiting"
 msgstr "{waiting}명 대기 중"
@@ -4207,6 +4213,12 @@ msgstr "채팅 실행"
 msgid "Chat mode"
 msgstr "채팅 모드"
 
+msgid "Chat needs {minVersion} or newer. Paradev can update it for you."
+msgstr "채팅에는 {minVersion} 이상이 필요합니다. Paradev가 대신 업데이트할 수 있습니다."
+
+msgid "Chat needs {minVersion} or newer. Update your {name}, then click Try again."
+msgstr "채팅에는 {minVersion} 이상이 필요합니다. {name}을(를) 업데이트한 다음 다시 시도를 클릭하세요."
+
 msgid "Chat session not found"
 msgstr "채팅 세션을 찾을 수 없습니다"
 
@@ -6192,16 +6204,13 @@ msgstr "댓글을 게시할 수 없습니다"
 msgid "Couldn't post reply"
 msgstr "답글을 게시하지 못했습니다"
 
+msgid "Couldn't reach {vendor}. Check your internet connection and try again."
+msgstr "{vendor}에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요."
+
 #. placeholder {0}: first.url
 #. placeholder {1}: first.message
 msgid "Couldn't reach cloud for {0}: {1}"
 msgstr "{0}에 대해 클라우드에 연결할 수 없습니다: {1}"
-
-msgid "Couldn't reach GitHub. Check your internet connection and try again."
-msgstr "GitHub에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요."
-
-msgid "Couldn't reach the download server. Check your internet connection and try again."
-msgstr "다운로드 서버에 연결할 수 없습니다. 인터넷 연결을 확인한 후 다시 시도하세요."
 
 msgid "Couldn't reach the model provider"
 msgstr "모델 제공자에 연결할 수 없습니다"
@@ -6285,8 +6294,8 @@ msgstr "에이전트에 보내지 못했습니다"
 msgid "Couldn't send your message. It's back in the composer."
 msgstr "메시지를 보내지 못했습니다. 입력란으로 다시 옮겼습니다."
 
-msgid "Couldn't set up {name} on this Mac."
-msgstr "이 Mac에서 {name}을(를) 설정할 수 없습니다."
+msgid "Couldn't set up {name} on this computer."
+msgstr "이 컴퓨터에서 {name}을(를) 설정할 수 없습니다."
 
 msgid "Couldn't stage changes"
 msgstr "변경 사항을 스테이징하지 못했습니다"
@@ -6335,9 +6344,6 @@ msgstr "이동을 다시 시도할 수 없습니다"
 
 msgid "Couldn't undo the file changes."
 msgstr "파일 변경을 실행 취소하지 못했습니다."
-
-msgid "Couldn't unpack or save GitHub CLI on this Mac."
-msgstr "이 Mac에서 GitHub CLI의 압축을 풀거나 저장할 수 없습니다."
 
 msgid "Couldn't unstage changes"
 msgstr "스테이징을 해제하지 못했습니다"
@@ -7271,9 +7277,6 @@ msgstr "이 기기에서는 받아쓰기를 사용할 수 없습니다"
 msgid "Dictation is not available right now"
 msgstr "지금은 받아쓰기를 사용할 수 없습니다"
 
-msgid "Did the page show a code? Paste it here"
-msgstr "페이지에 코드가 표시되었나요? 여기에 붙여넣으세요"
-
 msgid "Didn't hear back"
 msgstr "응답이 없습니다"
 
@@ -7606,9 +7609,6 @@ msgstr "{name} 다운로드 중…"
 
 msgid "Downloading from Apple needs an Apple ID. The install can need about 20 GB of free space."
 msgstr "Apple에서 다운로드하려면 Apple ID가 필요합니다. 설치에 약 20 GB의 여유 공간이 필요할 수 있습니다."
-
-msgid "Downloading GitHub CLI…"
-msgstr "GitHub CLI 다운로드 중…"
 
 msgid "Downloading..."
 msgstr "다운로드 중..."
@@ -8988,9 +8988,6 @@ msgstr "Finder"
 msgid "Finish review"
 msgstr "리뷰 마치기"
 
-msgid "Finish signing in in your browser. This updates on its own."
-msgstr "브라우저에서 로그인을 완료하세요. 이 화면은 자동으로 업데이트됩니다."
-
 msgid "Finished"
 msgstr "완료"
 
@@ -9519,9 +9516,6 @@ msgstr "GitHub 설치를 찾을 수 없습니다"
 
 msgid "GitHub integration"
 msgstr "GitHub 연동"
-
-msgid "GitHub is limiting downloads right now. Wait a minute and try again."
-msgstr "GitHub가 지금 다운로드를 제한하고 있습니다. 잠시 후 다시 시도하세요."
 
 msgid "GitHub issues"
 msgstr "GitHub 이슈"
@@ -10462,9 +10456,6 @@ msgstr "설치됨 · Claude 계정으로 로그인하세요"
 
 msgid "Installed by your organization"
 msgstr "조직에서 설치함"
-
-msgid "Installed it another way, like Homebrew? Click Check again."
-msgstr "Homebrew 같은 다른 방법으로 설치했나요? 다시 확인을 클릭하세요."
 
 msgid "Installed it another way? Click Check again."
 msgstr "다른 방법으로 설치했나요? 다시 확인을 클릭하세요."
@@ -14252,9 +14243,6 @@ msgstr "새 워크스페이스 모달을 엽니다"
 msgid "Open the original workspace"
 msgstr "원래 워크스페이스 열기"
 
-msgid "Open the page again"
-msgstr "페이지 다시 열기"
-
 msgid "Open the resource usage view in the command palette"
 msgstr "명령 팔레트에서 리소스 사용량 보기를 엽니다"
 
@@ -14306,9 +14294,6 @@ msgstr "채팅 인터페이스에서 여는 중…"
 msgid "Opening pages"
 msgstr "페이지 열기"
 
-msgid "Opening the sign-in page…"
-msgstr "로그인 페이지 여는 중…"
-
 msgid "Operator"
 msgstr "작업자"
 
@@ -14335,9 +14320,6 @@ msgstr "선택 사항입니다. 무엇이 효과적인지 파악하는 데 도�
 
 msgid "Options"
 msgstr "옵션"
-
-msgid "Or sign in from a terminal:"
-msgstr "또는 터미널에서 로그인:"
 
 msgid "Orange"
 msgstr "주황"
@@ -14751,9 +14733,6 @@ msgstr "Paradev는 2025년 11월 해커톤 프로젝트로 시작했습니다. w
 
 msgid "Paradev still can't find {name}."
 msgstr "Paradev가 아직 {name}을(를) 찾을 수 없습니다."
-
-msgid "Paradev still can't find GitHub CLI."
-msgstr "Paradev가 아직 GitHub CLI를 찾을 수 없습니다."
 
 msgid "Paradev Teams"
 msgstr "Paradev 팀"
@@ -18420,6 +18399,9 @@ msgstr "한 번만 로그인하세요. 연결은 Paradev가 유지합니다."
 msgid "Sign in to {0}"
 msgstr "{0}에 로그인"
 
+msgid "Sign in to {name} below. Your browser opens to finish."
+msgstr "아래에서 {name}에 로그인하세요. 완료하려면 브라우저가 열립니다."
+
 msgid "Sign in to change your organization's plugins."
 msgstr "조직 플러그인을 변경하려면 로그인하세요."
 
@@ -18484,9 +18466,6 @@ msgstr "GitHub로 가입"
 
 msgid "Sign up with Google"
 msgstr "Google로 가입"
-
-msgid "Sign-in code"
-msgstr "로그인 코드"
 
 msgid "Sign-in didn't finish"
 msgstr "로그인이 완료되지 않았습니다"
@@ -20312,6 +20291,9 @@ msgstr "테마 미리 보기 카드"
 
 msgid "Themes"
 msgstr "테마"
+
+msgid "There isn't enough free disk space to install {name}. Free up some space and try again."
+msgstr "{name}을(를) 설치할 디스크 공간이 부족합니다. 공간을 확보한 후 다시 시도하세요."
 
 msgid "These commands run automatically when a workspace is created. <0>Read our docs<1/></0>"
 msgstr "워크스페이스를 만들 때 이 명령이 자동으로 실행됩니다. <0>문서 보기<1/></0>"

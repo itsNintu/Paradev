@@ -1141,6 +1141,9 @@ msgstr "{monthlyPrice} pro Nutzer/Monat. Mobile, Automatisierungen, bevorzugter 
 msgid "{myFailedCount} of your automations failed their last run"
 msgstr "Bei {myFailedCount} deiner Automatisierungen ist der letzte Lauf fehlgeschlagen"
 
+msgid "{name} {version} is too old for chat"
+msgstr "{name} {version} ist zu alt für den Chat"
+
 msgid "{name} accounts"
 msgstr "{name}-Konten"
 
@@ -1458,6 +1461,9 @@ msgstr "{user} ist wieder beigetreten."
 
 msgid "{vcpuCount} vCPU · {memory} GB"
 msgstr "{vcpuCount} vCPU · {memory} GB"
+
+msgid "{vendor} is limiting downloads right now. Wait a minute and try again."
+msgstr "{vendor} begrenzt gerade die Downloads. Warte eine Minute und versuche es erneut."
 
 msgid "{waiting} Waiting"
 msgstr "{waiting} ausstehend"
@@ -4207,6 +4213,12 @@ msgstr "Chat-Start"
 msgid "Chat mode"
 msgstr "Chat-Modus"
 
+msgid "Chat needs {minVersion} or newer. Paradev can update it for you."
+msgstr "Der Chat braucht {minVersion} oder neuer. Paradev kann es für dich aktualisieren."
+
+msgid "Chat needs {minVersion} or newer. Update your {name}, then click Try again."
+msgstr "Der Chat braucht {minVersion} oder neuer. Aktualisiere dein {name} und klicke dann auf Erneut versuchen."
+
 msgid "Chat session not found"
 msgstr "Chat-Sitzung nicht gefunden"
 
@@ -6192,16 +6204,13 @@ msgstr "Kommentar konnte nicht gepostet werden"
 msgid "Couldn't post reply"
 msgstr "Antwort konnte nicht gesendet werden"
 
+msgid "Couldn't reach {vendor}. Check your internet connection and try again."
+msgstr "{vendor} ist nicht erreichbar. Prüfe deine Internetverbindung und versuche es erneut."
+
 #. placeholder {0}: first.url
 #. placeholder {1}: first.message
 msgid "Couldn't reach cloud for {0}: {1}"
 msgstr "Cloud für {0} nicht erreichbar: {1}"
-
-msgid "Couldn't reach GitHub. Check your internet connection and try again."
-msgstr "GitHub ist nicht erreichbar. Prüfe deine Internetverbindung und versuche es erneut."
-
-msgid "Couldn't reach the download server. Check your internet connection and try again."
-msgstr "Der Download-Server ist nicht erreichbar. Prüfe deine Internetverbindung und versuche es erneut."
 
 msgid "Couldn't reach the model provider"
 msgstr "Modellanbieter nicht erreichbar"
@@ -6285,8 +6294,8 @@ msgstr "Senden an den Agenten fehlgeschlagen"
 msgid "Couldn't send your message. It's back in the composer."
 msgstr "Deine Nachricht konnte nicht gesendet werden. Sie ist wieder im Eingabefeld."
 
-msgid "Couldn't set up {name} on this Mac."
-msgstr "{name} konnte auf diesem Mac nicht eingerichtet werden."
+msgid "Couldn't set up {name} on this computer."
+msgstr "{name} konnte auf diesem Computer nicht eingerichtet werden."
 
 msgid "Couldn't stage changes"
 msgstr "Änderungen konnten nicht gestaged werden"
@@ -6335,9 +6344,6 @@ msgstr "Der Umzug konnte nicht erneut versucht werden"
 
 msgid "Couldn't undo the file changes."
 msgstr "Die Dateiänderungen konnten nicht rückgängig gemacht werden."
-
-msgid "Couldn't unpack or save GitHub CLI on this Mac."
-msgstr "GitHub CLI konnte auf diesem Mac nicht entpackt oder gespeichert werden."
 
 msgid "Couldn't unstage changes"
 msgstr "Stagen konnte nicht aufgehoben werden"
@@ -7271,9 +7277,6 @@ msgstr "Diktieren ist auf diesem Gerät nicht verfügbar"
 msgid "Dictation is not available right now"
 msgstr "Diktieren ist gerade nicht verfügbar"
 
-msgid "Did the page show a code? Paste it here"
-msgstr "Zeigt die Seite einen Code? Füge ihn hier ein"
-
 msgid "Didn't hear back"
 msgstr "Keine Antwort erhalten"
 
@@ -7606,9 +7609,6 @@ msgstr "{name} wird heruntergeladen…"
 
 msgid "Downloading from Apple needs an Apple ID. The install can need about 20 GB of free space."
 msgstr "Für den Download von Apple brauchst du eine Apple-ID. Die Installation kann etwa 20 GB freien Speicher benötigen."
-
-msgid "Downloading GitHub CLI…"
-msgstr "GitHub CLI wird heruntergeladen…"
 
 msgid "Downloading..."
 msgstr "Wird heruntergeladen..."
@@ -8988,9 +8988,6 @@ msgstr "Finder"
 msgid "Finish review"
 msgstr "Review abschließen"
 
-msgid "Finish signing in in your browser. This updates on its own."
-msgstr "Schließe die Anmeldung in deinem Browser ab. Dies aktualisiert sich von selbst."
-
 msgid "Finished"
 msgstr "Abgeschlossen"
 
@@ -9519,9 +9516,6 @@ msgstr "GitHub-Installation nicht gefunden"
 
 msgid "GitHub integration"
 msgstr "GitHub-Integration"
-
-msgid "GitHub is limiting downloads right now. Wait a minute and try again."
-msgstr "GitHub begrenzt gerade die Downloads. Warte eine Minute und versuche es erneut."
 
 msgid "GitHub issues"
 msgstr "GitHub-Issues"
@@ -10462,9 +10456,6 @@ msgstr "Installiert · melde dich mit deinem Claude-Konto an"
 
 msgid "Installed by your organization"
 msgstr "Von Ihrer Organisation installiert"
-
-msgid "Installed it another way, like Homebrew? Click Check again."
-msgstr "Auf anderem Weg installiert, etwa mit Homebrew? Klicke auf Erneut prüfen."
 
 msgid "Installed it another way? Click Check again."
 msgstr "Auf andere Weise installiert? Klicke auf Erneut prüfen."
@@ -14252,9 +14243,6 @@ msgstr "Den Dialog für einen neuen Arbeitsbereich öffnen"
 msgid "Open the original workspace"
 msgstr "Ursprünglichen Arbeitsbereich öffnen"
 
-msgid "Open the page again"
-msgstr "Seite erneut öffnen"
-
 msgid "Open the resource usage view in the command palette"
 msgstr "Die Ressourcen-Ansicht in der Befehlspalette öffnen"
 
@@ -14306,9 +14294,6 @@ msgstr "Wird in der Chat-Oberfläche geöffnet…"
 msgid "Opening pages"
 msgstr "Seiten öffnen"
 
-msgid "Opening the sign-in page…"
-msgstr "Anmeldeseite wird geöffnet…"
-
 msgid "Operator"
 msgstr "Operator"
 
@@ -14335,9 +14320,6 @@ msgstr "Optional. Hilft uns zu verstehen, was funktioniert."
 
 msgid "Options"
 msgstr "Optionen"
-
-msgid "Or sign in from a terminal:"
-msgstr "Oder melde dich in einem Terminal an:"
 
 msgid "Orange"
 msgstr "Orange"
@@ -14751,9 +14733,6 @@ msgstr "Paradev begann im November 2025 als Hackathon-Projekt. Es war eine simpl
 
 msgid "Paradev still can't find {name}."
 msgstr "Paradev findet {name} immer noch nicht."
-
-msgid "Paradev still can't find GitHub CLI."
-msgstr "Paradev findet GitHub CLI immer noch nicht."
 
 msgid "Paradev Teams"
 msgstr "Paradev-Teams"
@@ -18420,6 +18399,9 @@ msgstr "Einmal anmelden. Paradev hält die Verbindung."
 msgid "Sign in to {0}"
 msgstr "Bei {0} anmelden"
 
+msgid "Sign in to {name} below. Your browser opens to finish."
+msgstr "Melde dich unten bei {name} an. Zum Abschließen öffnet sich dein Browser."
+
 msgid "Sign in to change your organization's plugins."
 msgstr "Melde dich an, um die Plugins deiner Organisation zu ändern."
 
@@ -18484,9 +18466,6 @@ msgstr "Mit GitHub registrieren"
 
 msgid "Sign up with Google"
 msgstr "Mit Google registrieren"
-
-msgid "Sign-in code"
-msgstr "Anmeldecode"
 
 msgid "Sign-in didn't finish"
 msgstr "Die Anmeldung wurde nicht abgeschlossen"
@@ -20312,6 +20291,9 @@ msgstr "Theme Preview Card"
 
 msgid "Themes"
 msgstr "Themes"
+
+msgid "There isn't enough free disk space to install {name}. Free up some space and try again."
+msgstr "Es ist nicht genug Speicherplatz frei, um {name} zu installieren. Gib etwas Speicherplatz frei und versuche es erneut."
 
 msgid "These commands run automatically when a workspace is created. <0>Read our docs<1/></0>"
 msgstr "Diese Befehle laufen automatisch, wenn ein Arbeitsbereich erstellt wird. <0>Zur Doku<1/></0>"

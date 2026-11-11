@@ -1141,6 +1141,9 @@ msgstr "{monthlyPrice} per gebruiker/maand. Mobiel, automatiseringen, prioriteit
 msgid "{myFailedCount} of your automations failed their last run"
 msgstr "Bij {myFailedCount} van je automatiseringen is de laatste run mislukt"
 
+msgid "{name} {version} is too old for chat"
+msgstr "{name} {version} is te oud voor chat"
+
 msgid "{name} accounts"
 msgstr "{name}-accounts"
 
@@ -1458,6 +1461,9 @@ msgstr "{user} is opnieuw erbij gekomen."
 
 msgid "{vcpuCount} vCPU · {memory} GB"
 msgstr "{vcpuCount} vCPU · {memory} GB"
+
+msgid "{vendor} is limiting downloads right now. Wait a minute and try again."
+msgstr "{vendor} beperkt op dit moment downloads. Wacht een minuut en probeer het opnieuw."
 
 msgid "{waiting} Waiting"
 msgstr "{waiting} wachten"
@@ -4207,6 +4213,12 @@ msgstr "Start via chat"
 msgid "Chat mode"
 msgstr "Chatmodus"
 
+msgid "Chat needs {minVersion} or newer. Paradev can update it for you."
+msgstr "Chat heeft {minVersion} of nieuwer nodig. Paradev kan het voor je bijwerken."
+
+msgid "Chat needs {minVersion} or newer. Update your {name}, then click Try again."
+msgstr "Chat heeft {minVersion} of nieuwer nodig. Werk je {name} bij en klik daarna op Opnieuw proberen."
+
 msgid "Chat session not found"
 msgstr "Chatsessie niet gevonden"
 
@@ -6192,16 +6204,13 @@ msgstr "Kon reactie niet plaatsen"
 msgid "Couldn't post reply"
 msgstr "Kan antwoord niet plaatsen"
 
+msgid "Couldn't reach {vendor}. Check your internet connection and try again."
+msgstr "Kan {vendor} niet bereiken. Controleer je internetverbinding en probeer het opnieuw."
+
 #. placeholder {0}: first.url
 #. placeholder {1}: first.message
 msgid "Couldn't reach cloud for {0}: {1}"
 msgstr "Kan de cloud niet bereiken voor {0}: {1}"
-
-msgid "Couldn't reach GitHub. Check your internet connection and try again."
-msgstr "Kan GitHub niet bereiken. Controleer je internetverbinding en probeer het opnieuw."
-
-msgid "Couldn't reach the download server. Check your internet connection and try again."
-msgstr "Kan de downloadserver niet bereiken. Controleer je internetverbinding en probeer het opnieuw."
 
 msgid "Couldn't reach the model provider"
 msgstr "Kon de modelprovider niet bereiken"
@@ -6285,8 +6294,8 @@ msgstr "Kan niet naar de agent sturen"
 msgid "Couldn't send your message. It's back in the composer."
 msgstr "Je bericht kon niet worden verzonden. Het staat weer in het invoerveld."
 
-msgid "Couldn't set up {name} on this Mac."
-msgstr "Kan {name} niet instellen op deze Mac."
+msgid "Couldn't set up {name} on this computer."
+msgstr "Kan {name} niet instellen op deze computer."
 
 msgid "Couldn't stage changes"
 msgstr "Kan wijzigingen niet stagen"
@@ -6335,9 +6344,6 @@ msgstr "De verplaatsing kon niet opnieuw worden geprobeerd"
 
 msgid "Couldn't undo the file changes."
 msgstr "De bestandswijzigingen konden niet ongedaan worden gemaakt."
-
-msgid "Couldn't unpack or save GitHub CLI on this Mac."
-msgstr "Kan GitHub CLI niet uitpakken of opslaan op deze Mac."
 
 msgid "Couldn't unstage changes"
 msgstr "Kan wijzigingen niet unstagen"
@@ -7271,9 +7277,6 @@ msgstr "Dicteren is niet beschikbaar op dit apparaat"
 msgid "Dictation is not available right now"
 msgstr "Dicteren is nu niet beschikbaar"
 
-msgid "Did the page show a code? Paste it here"
-msgstr "Toont de pagina een code? Plak die hier"
-
 msgid "Didn't hear back"
 msgstr "Geen reactie ontvangen"
 
@@ -7606,9 +7609,6 @@ msgstr "{name} downloaden…"
 
 msgid "Downloading from Apple needs an Apple ID. The install can need about 20 GB of free space."
 msgstr "Downloaden van Apple vereist een Apple ID. De installatie kan ongeveer 20 GB vrije ruimte nodig hebben."
-
-msgid "Downloading GitHub CLI…"
-msgstr "GitHub CLI downloaden…"
 
 msgid "Downloading..."
 msgstr "Downloaden..."
@@ -8988,9 +8988,6 @@ msgstr "Finder"
 msgid "Finish review"
 msgstr "Review afronden"
 
-msgid "Finish signing in in your browser. This updates on its own."
-msgstr "Rond het inloggen af in je browser. Dit wordt vanzelf bijgewerkt."
-
 msgid "Finished"
 msgstr "Voltooid"
 
@@ -9519,9 +9516,6 @@ msgstr "GitHub-installatie niet gevonden"
 
 msgid "GitHub integration"
 msgstr "GitHub-integratie"
-
-msgid "GitHub is limiting downloads right now. Wait a minute and try again."
-msgstr "GitHub beperkt op dit moment downloads. Wacht een minuut en probeer het opnieuw."
 
 msgid "GitHub issues"
 msgstr "GitHub-issues"
@@ -10462,9 +10456,6 @@ msgstr "Geïnstalleerd · log in met je Claude-account"
 
 msgid "Installed by your organization"
 msgstr "Geïnstalleerd door je organisatie"
-
-msgid "Installed it another way, like Homebrew? Click Check again."
-msgstr "Op een andere manier geïnstalleerd, bijvoorbeeld met Homebrew? Klik op Opnieuw controleren."
 
 msgid "Installed it another way? Click Check again."
 msgstr "Op een andere manier geïnstalleerd? Klik op Opnieuw controleren."
@@ -14252,9 +14243,6 @@ msgstr "Het venster voor een nieuwe werkruimte openen"
 msgid "Open the original workspace"
 msgstr "Oorspronkelijke werkruimte openen"
 
-msgid "Open the page again"
-msgstr "Pagina opnieuw openen"
-
 msgid "Open the resource usage view in the command palette"
 msgstr "De weergave van resourcegebruik in het opdrachtenpalet openen"
 
@@ -14306,9 +14294,6 @@ msgstr "Openen in chatinterface…"
 msgid "Opening pages"
 msgstr "Pagina's openen"
 
-msgid "Opening the sign-in page…"
-msgstr "Inlogpagina openen…"
-
 msgid "Operator"
 msgstr "Operator"
 
@@ -14335,9 +14320,6 @@ msgstr "Optioneel. Helpt ons te zien wat werkt."
 
 msgid "Options"
 msgstr "Opties"
-
-msgid "Or sign in from a terminal:"
-msgstr "Of log in vanuit een terminal:"
 
 msgid "Orange"
 msgstr "Oranje"
@@ -14751,9 +14733,6 @@ msgstr "Paradev begon in november 2025 als hackathonproject. Het was een simpele
 
 msgid "Paradev still can't find {name}."
 msgstr "Paradev kan {name} nog steeds niet vinden."
-
-msgid "Paradev still can't find GitHub CLI."
-msgstr "Paradev kan GitHub CLI nog steeds niet vinden."
 
 msgid "Paradev Teams"
 msgstr "Paradev Teams"
@@ -18420,6 +18399,9 @@ msgstr "Eén keer inloggen. Paradev houdt de verbinding."
 msgid "Sign in to {0}"
 msgstr "Log in bij {0}"
 
+msgid "Sign in to {name} below. Your browser opens to finish."
+msgstr "Log hieronder in bij {name}. Je browser opent om het af te ronden."
+
 msgid "Sign in to change your organization's plugins."
 msgstr "Log in om de plugins van je organisatie te wijzigen."
 
@@ -18484,9 +18466,6 @@ msgstr "Registreren met GitHub"
 
 msgid "Sign up with Google"
 msgstr "Registreren met Google"
-
-msgid "Sign-in code"
-msgstr "Inlogcode"
 
 msgid "Sign-in didn't finish"
 msgstr "Inloggen is niet voltooid"
@@ -20312,6 +20291,9 @@ msgstr "Theme Preview Card"
 
 msgid "Themes"
 msgstr "Thema's"
+
+msgid "There isn't enough free disk space to install {name}. Free up some space and try again."
+msgstr "Er is niet genoeg vrije schijfruimte om {name} te installeren. Maak ruimte vrij en probeer het opnieuw."
 
 msgid "These commands run automatically when a workspace is created. <0>Read our docs<1/></0>"
 msgstr "Deze commando's draaien automatisch wanneer een werkruimte wordt aangemaakt. <0>Lees onze docs<1/></0>"
