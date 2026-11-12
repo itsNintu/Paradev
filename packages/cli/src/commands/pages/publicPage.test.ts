@@ -1,9 +1,8 @@
 import { describe, expect, test } from "bun:test";
 import { TRPCClientError } from "@trpc/client";
-import type { CliContext } from "../../lib/command";
-import { publicPageInstead } from "./publicPage";
+import { publicFallback } from "./publicPage";
 
-const PUBLIC_PAGE = { slug: "q3", version: 1, viewUrl: "https://frame/v1/" };
+const PUBLIC_PAGE = { slug: "q3", version: 1 };
 
 function trpcError(code: string, i18nKey: string | null) {
 	return new TRPCClientError("refused", {
@@ -13,46 +12,60 @@ function trpcError(code: string, i18nKey: string | null) {
 	});
 }
 
-function apiWith(publicView: unknown) {
-	const asked: unknown[] = [];
-	const ctx = {
-		api: {
-			page: {
-				publicView: {
-					query: async (input: unknown) => {
-						asked.push(input);
-						return publicView;
-					},
-				},
-			},
-		},
-	} as unknown as Pick<CliContext, "api">;
-	return { ctx, asked };
+const pageMissing = () =>
+	trpcError("NOT_FOUND", "serverError.page.pageNotFound");
+
+function reader(result: typeof PUBLIC_PAGE | null) {
+	const asked: string[] = [];
+	const read = async (slug: string) => {
+		asked.push(slug);
+		return result;
+	};
+	return { read, asked };
 }
 
-describe("publicPageInstead", () => {
-	test("returns the public page when the organization lookup misses it", async () => {
-		const { ctx } = apiWith(PUBLIC_PAGE);
-		const missed = trpcError("NOT_FOUND", "serverError.page.pageNotFound");
-		expect(await publicPageInstead(ctx, { slug: "q3" }, missed)).toEqual(
-			PUBLIC_PAGE as never,
+describe("publicFallback", () => {
+	test("reads the public page when the organization lookup misses it", async () => {
+		const { read, asked } = reader(PUBLIC_PAGE);
+		expect(await publicFallback({ slug: "q3" }, pageMissing(), read)).toEqual(
+			PUBLIC_PAGE,
 		);
+		expect(asked).toEqual(["q3"]);
 	});
 
 	test("keeps the original error when the page is not public", async () => {
-		const { ctx } = apiWith(null);
-		const otherOrg = trpcError("FORBIDDEN", null);
-		await expect(publicPageInstead(ctx, { slug: "q3" }, otherOrg)).rejects.toBe(
-			otherOrg,
+		const { read } = reader(null);
+		const missing = pageMissing();
+		await expect(publicFallback({ slug: "q3" }, missing, read)).rejects.toBe(
+			missing,
 		);
 	});
 
-	test("does not hide a missing version behind the public one", async () => {
-		const { ctx, asked } = apiWith(PUBLIC_PAGE);
-		const noVersion = trpcError("NOT_FOUND", null);
-		await expect(
-			publicPageInstead(ctx, { slug: "q3" }, noVersion),
-		).rejects.toBe(noVersion);
+	test("keeps the switch-organization error for a member of the page's organization", async () => {
+		const { read, asked } = reader(PUBLIC_PAGE);
+		const otherOrg = trpcError("FORBIDDEN", null);
+		await expect(publicFallback({ slug: "q3" }, otherOrg, read)).rejects.toBe(
+			otherOrg,
+		);
 		expect(asked).toEqual([]);
+	});
+
+	test("does not hide a missing version behind the public one", async () => {
+		const { read, asked } = reader(PUBLIC_PAGE);
+		const noVersion = trpcError("NOT_FOUND", null);
+		await expect(publicFallback({ slug: "q3" }, noVersion, read)).rejects.toBe(
+			noVersion,
+		);
+		expect(asked).toEqual([]);
+	});
+
+	test("keeps the original error when the public read fails", async () => {
+		const missing = pageMissing();
+		const read = async () => {
+			throw new Error("No procedure found");
+		};
+		await expect(publicFallback({ slug: "q3" }, missing, read)).rejects.toBe(
+			missing,
+		);
 	});
 });

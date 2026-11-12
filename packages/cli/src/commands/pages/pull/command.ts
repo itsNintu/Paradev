@@ -1,7 +1,7 @@
 import { CLIError, number, positional } from "@superset/cli-framework";
 import { type CliContext, command } from "../../../lib/command";
-import { pageRefFromArg } from "../pageRef";
-import { publicPageInstead } from "../publicPage";
+import { pageLinkVersion, pageRefFromArg } from "../pageRef";
+import { publicFallback } from "../publicPage";
 
 const DOWNLOAD_TIMEOUT_MS = 30_000;
 
@@ -46,14 +46,16 @@ async function locateVersion(
 		});
 		return { url: version.downloadUrl, version: version.version };
 	} catch (error) {
-		const page = await publicPageInstead(ctx, ref, error);
+		const page = await publicFallback(ref, error, (slug) =>
+			ctx.api.page.publicPull.query({ slug }),
+		);
 		if (requested && requested !== page.version) {
 			throw new CLIError(
 				`Version ${requested} is not public`,
 				`From outside its organization, only the version this page serves (${page.version}) can be read`,
 			);
 		}
-		return { url: page.viewUrl, version: page.version };
+		return { url: page.downloadUrl, version: page.version };
 	}
 }
 
@@ -63,13 +65,15 @@ export default command({
 	options: {
 		version: number()
 			.alias("v")
-			.desc("Version to fetch (defaults to the one currently served)"),
+			.desc(
+				"Version to fetch (defaults to a link's ?v=, else the one currently served)",
+			),
 	},
 	run: async ({ ctx, args, options }) => {
 		const { url, version } = await locateVersion(
 			ctx,
 			args.page as string,
-			options.version,
+			options.version ?? pageLinkVersion(args.page as string),
 		);
 		process.stdout.write(Buffer.from(await download(url, version)));
 		return undefined;
